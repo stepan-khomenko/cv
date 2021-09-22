@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+
+        <style>
+            @import url('./assets/css/all.min.css');
+
+            :root {
+                font-family: Helvetica, Arial, sans-serif;
+                font-size: calc(0.3em + 1vw);
+                box-sizing: border-box;
+                --light-light-gray: #f7f7f7;
+            }
+            * {
+                margin: 0;
+                box-sizing: inherit;
+            }
+            * > * {
+                margin-top: 0.5em;
+            }
+            body {
+                margin: 0;
+            }
+            #content {
+                display: grid;
+                grid-template-areas: 'left right';
+                margin: 0;
+            }
+            aside {
+                grid-area: left;
+                display: flex;
+                flex-direction: column;
+                width: 30vw;
+                background-color: #030329;
+                color: #cccccc;
+                padding: 10px;
+            }
+            main {
+                grid-area: right;
+                width: 70vw;
+                background-color: #fbfbfb;
+                color: #979798;
+                margin-top: 0;
+                padding: 10px 1em;
+            }
+            aside section {
+                margin-bottom: 1em;
+            }
+            main section:not(:last-child) {
+                margin-bottom: 2em;
+            }
+            main section:first-child {
+                margin-top: 0;
+            }
+            article {
+                margin-bottom: 20px;
+            }
+            h1 {
+                font-size: 1.5rem;
+                color: var(--light-light-gray);
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            img {
+                width: 100%;
+                height: 15vw;
+                object-fit: cover;
+                object-position: 0 20%;
+            }
+            h3 {
+                font-size: 1em;
+                text-transform: uppercase;
+            }
+            aside h3 {
+                color: var(--light-light-gray);
+                text-decoration: underline;
+                line-height: 1.5;
+            }
+            main h3 {
+                margin: 0 -5px 15px;
+                padding: 0.3em 0.6em;
+                background-color: #030329;
+                color: #fff;
+                letter-spacing: 0.06em;
+            }
+            main h4 {
+                color: #030329;
+                font-size: 0.85em;
+                text-transform: uppercase;
+            }
+            main li {
+                font-size: 0.8em;
+            }
+            h5 {
+                font-size: 0.9em;
+                font-weight: normal;
+                color: #030329;
+                margin-top: 0;
+            }
+            aside a {
+                color: #cccccc;
+                text-decoration: none;
+            }
+            main a {
+                color: #3131b3;
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            figure {
+                margin-top: 0;
+            }
+            ul {
+                margin-top: 0;
+                padding-left: 2em;
+            }
+            .m-0 {
+                margin: 0;
+            }
+            .op-5 {
+                opacity: .5;
+            }
+            .d-f {
+                display: flex;
+            }
+            .icon-span {
+                width: 1em;
+                margin: 0 5px 0;
+                display: inline-block;
+                text-align: center;
+            }
+            i, .skill__title {
+                color: var(--light-light-gray);
+            }
+            .skill__wrapper {
+                display: flex;
+                margin: 0 0 0 0.3em;
+            }
+            .skill__title {
+                flex: 1;
+                min-width: 12vw;
+            }
+            .skill {
+                flex:3;
+            }
+            .pipe {
+                color: #979798;
+            }
+            #presentaton__block {
+                font-size: 0.9em;
+                line-height: 1.3;
+            }
+            @media (max-width: 672px) {
+                .to-hide:not(.icon-span) {
+                    display: none;
+                }
+            }
+            @media (max-width: 552px) {
+                .icon-span.to-hide {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="content">
+            <aside>
+                <figure>
+                    <figcaption>
+                        <h1>Stepan Khomenko</h1>
+                        <h2>Développeur web</h2>
+                    </figcaption>
+                    <img src="./images/cv_photo.jpeg" alt="photo">
+                </figure>
+
+                <section>
+                    <h3>Contacts</h3>
+                    <div class="m-0">
+                        <span class="icon-span to-hide"><i class="fal fa-home"></i></span>
+                        1 Cours du Buisson, Noisiel<span class="to-hide">&nbsp;77186</span>
+                    </div>
+                    <div class="m-0">
+                        <span class="icon-span to-hide"><i class="fal fa-mobile"></i></span>
+                        + 33 7 81 93 22 82
+                    </div>
+                    <div class="m-0">
+                        <span class="icon-span to-hide"><i class="fal fa-at"></i></span>
+                        <a href = "mailto: stepan.khomenko@gmail.com">stepan.khomenko@gmail.com</a>
+                    </div>
+                    <div class="m-0">
+                        <span class="icon-span to-hide"><i class="fab fa-linkedin"></i></span>
+                        <a href="https://linkedin.com/stepan-khomenko" target="_blank">linkedin.com/stepan-khomenko</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Compétences techniques</h3>
+                    <div class="skill__wrapper">
+                        <span class="skill__title">Languages:&nbsp;</span>
+                        <div class="skill">
+                            PHP, Javascript, HTML/CSS, SQL,&nbsp;
+                            <span class="op-5">Java</span>,&nbsp;
+                            <span class="op-5">Python</span>,&nbsp;
+                            <span class="op-5">PL/SQL</span>
+                        </div>
+                    </div>
+                    <div class="skill__wrapper">
+                        <span class="skill__title">Frameworks:&nbsp;</span>
+                        <div class="skill">
+                            Bootstrap, jQuery,&nbsp;
+                            <span class="op-5">Laravel</span>,&nbsp;
+                            <span class="op-5">Symfony</span>,&nbsp;
+                            <span class="op-5">Vue.js</span>,&nbsp;
+                            <span class="op-5">Struts 2</span>,&nbsp;
+                            <span class="op-5">JavaFX</span>
+                        </div>
+                    </div>
+                    <div class="skill__wrapper">
+                        <span class="skill__title">SGBDs:&nbsp;</span>
+                        <div class="skill">
+                            MySQL,&nbsp;
+                            <span class="op-5">SQLite</span>,&nbsp;
+                            <span class="op-5">Oracle Database</span>
+                        </div>
+                    </div>
+                    <div class="skill__wrapper">
+                        <span class="skill__title">Web services:&nbsp;</span>
+                        <div class="skill">
+                            REST, SOAP
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Compétences personnelles</h3>
+                    <div class="skill__wrapper">
+                        <ul>
+                            <li>capacité d’organisation</li>
+                            <li>sens des responsabilités</li>
+                            <li>travail en équipe</li>
+                            <li>flexibilité et adaptabilité</li>
+                            <li>autonomie</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Langues</h3>
+                    <div class="skill__wrapper">
+                        <ul>
+                            <li>Français - courant</li>
+                            <li>Anglais - intermédiaire</li>
+                            <li>Russe - langue maternelle</li>
+                        </ul>
+                    </div>
+                </section>
+            </aside>
+
+            <main>
+                <section>
+                    <h3>Présentation</h3>
+                    <p id="presentaton__block">
+                        Développeur full-stack, niveau entre junior et intermédiaire.
+                        Ayant 2 ans d’expérience dans le domaine de nouvelles technologies, je cherche à diversifier mes tâches professionnelles et évoluer dans mon métier.
+                        J’ai pu déjà acquérir de solides connaissances en programmation et je suis ouvert à une nouvelle opportunité que j’espère trouver dans votre entreprise.
+                        J'espère trouver cette opportunité chez votre entreprise.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Expérience professionnelle</h3>
+                    <div>
+                        <article>
+                            <h4>Développeur web full-stack</h4>
+                            <h5>
+                                <a href="https://labcollector.com" target="_blank">Agilebio</a>
+                                <span class="pipe">|</span> Paris <span class="pipe">|</span> 2019 - présent</h5>
+                            <ul>
+                                <li>Maintenir le code du logiciel</li>
+                                <li>Coder le front et back pour de nouvelles fonctionnalitées du logiciel</li>
+                                <li>Développer de l'API</li>
+                                <li>Rechercher et résoudre des bugs</li>
+                                <li>Support dans la conception de solutions</li>
+                                <li>Répondre aux tickets des clients</li>
+                                <li>Reporter l'avancement de mes travaux</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h4>Développeur web full-stack stagiaire</h4>
+                            <h5>
+                                <a href="https://www.emazing-retailing.com/en/index.html" target="_blanck">
+                                    eMazing-retailing
+                                </a>
+                                <span class="pipe">|</span> Paris <span class="pipe">|</span> 2019
+                            </h5>
+                            <ul>
+                                <li>Création d’un SaaS</li>
+                            </ul>
+                        </article>
+                        <article>
+                            <h4>Co-fondateur</h4>
+                            <h5>Meatline <span class="pipe">|</span> Russie <span class="pipe">|</span> 2010 - 2015</h5>
+                        </article>
+                        <article>
+                            <h4>Responsable de vente</h4>
+                            <h5>
+                                Coca-cola HBS <span class="pipe">|</span> Russie <span class="pipe">|</span> 2007 - 2010
+                            </h5>
+                        </article>
+                        <article>
+                            <h4>Agent commercial</h4>
+                            <h5>
+                                Coca-cola HBS <span class="pipe">|</span> Russie <span class="pipe">|</span> 2005 - 2007
+                            </h5>
+                        </article>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Formation</h3>
+                    <div>
+                        <article>
+                            <h4>Licence 3 Informatique</h4>
+                            <h5>
+                                l’Université d’Orléans&nbsp;<span class="pipe">|</span>&nbsp;Orléans&nbsp;<span class="pipe">|</span>&nbsp;2017 - 2019
+                            </h5>
+                        </article>
+                        <article>
+                            <h4>Cours de français</h4>
+                            <h5>
+                                la Mairie de Paris&nbsp;<span class="pipe">|</span>&nbsp;Paris&nbsp;<span class="pipe">|</span>&nbsp;2016 - 2017
+                            </h5>
+                        </article>
+                        <article>
+                            <h4>Master Economie et gestion</h4>
+                            <h5>
+                                l’Université technique d’état d’Omsk&nbsp;<span class="pipe">|</span>&nbsp;Russie&nbsp;<span class="pipe">|</span>&nbsp;2000 - 2005
+                            </h5>
+                        </article>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>Centres d’intérêt</h3>
+                    <ul>
+                        <li>Livres</li>
+                        <li>Développement personnel</li>
+                        <li>Sport</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
